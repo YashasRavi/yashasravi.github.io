@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yashas Ravi - About Me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the about me page of my website">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href = "project_style.css">
+<head>
+<body>
+  <header>
+    <a class = "header-brand" href="index.html" >Yashas Ravi</a>
+    <nav>
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+        <!--<a class = "header-cases" href="cases.html">Cases</a>-->
+    </nav>
+  </header>
+
+    <div  class = "AboutMe_main">
+      <h1>
+        Yashas Ravi
+      </h1>
+      <img class = "Imme" src="Images/MyPic.png" alt="picture">
+      <h2>
+        <div class = "about1">
+          I am a first-year student planning to double major in Computer Science and Biomathematics at Rutgers University, New Brunswick. I am passionate about Mathematics, Biology, and Computer Science, and I would love to use computer algorithms to model physical as well as abstract systems. Furthermore, I enjoy software development, implementation, and programming! I also love being a team member and using my creativity to make an impact on my peers.
+          <br>
+          <br>
+        </div>
+
+        <div id = "click1" class = "about2">
+          Click here for some information about me!
+          <img class = "arrow1" src="Images/arr1.png" alt="up arrow">
+        </div>
+
+        <div class = "txt1">
+          <br>
+          - For fun, I love watching YouTube! I usually watch clips from movies and TV Shows. My favorite TV Show is The Big Bang Theory!
+          <br>
+          <br>
+          - I love listening to music! My favorite song is probably Shape of You by Ed Sheeran :D
+          <br>
+          <br>
+          - I like animals a lot! I enjoy spending time with dogs and cats, although unfortunately I never had a pet myself.
+          <br>
+          <br>
+          - Even if I am more of an introvert, I am always looking forward to spending time with my friends :)
+          <br>
+          <br>
+          - I was born in India and I am very appreciative of Indian culture and Hindu rituals!
+          <br>
+          <br>
+
+        </div>
+
+        <div id = "click2" class = "about3">
+          Click here for some of my credentials and experiences:
+          <img class = "arrow2" src="Images/arr1.png" alt="up arrow">
+        </div>
+
+        <div class = "txt2">
+          <br>
+          - I am an Undergraduate Researcher at Dr. Martin Yarmush's laboratory at Rutgers, New Brunswick.
+          <br>
+          <br>
+          - I am the co-founder and Research Director of <a href="http://bioscience-collective.webflow.io/" target="_blank">BioScience Collective (BSC)</a>, a student-led nonprofit dedicated to helping students enjoy Biology.
+          <br>
+          <br>
+          - I am an expert problem-solver; I am an avid user and have solved 4000+ competitive math and science problems on Brilliant.org, a problem-solving platform for aspiring STEM students.
+          <br>
+          <br>
+          - I have won many awards in various Science Competitions, including Science Olympiad and USA Biology Olympiad (USABO).
+          <br>
+          <br>
+          - I love programming and have been involved in numerous computational projects with JAVA and JavaScript for 5+ years. I am also currently learning Python and MATLAB.
+          <br>
+          <br>
+          - I love reading Biology-related content and have spent 300+ hours reading 3000+ pages of advanced material (theory, lab techniques, hypotheses, etc) from graduate-level textbooks spanning Cell Biology, Plant Biology, Genetics, and Human Physiology.
+          <br>
+          <br>
+          - I am the General Meeting Planner of <a href="https://sites.google.com/site/rutgershsc//" target="_blank">Hindu Students Council (HSC)</a> at Rutgers, an organization devoted to protecting and preserving Hindu Dharma and philosophies.
+        </div>
+      </h2>
+    </div>
+    <footer>
+      <hr size="8" width="100%" color="red">
+        <ul>
+          <li>
+            <a href="index.html" >Main</a>
+          </li>
+          <!--<li>
+            <a href="cases.html">Cases</a>
+          </li>-->
+          <li>
+            <a href="portfolio.html" >Portfolio</a>
+          </li>
+          <li>
+            <a href="aboutme.html" >About me</a>
+          </li>
+          <li>
+            <a href="contacts.html" >Contacts</a>
+          </li>
+        </ul>
+
+        <div class = "footer-sm">
+            <a href="https://www.instagram.com/yashas.ravi.nj/" >
+              <img src="Images/Insta.png" alt="Instagram logo">
+            </a>
+            <a href="https://www.linkedin.com/in/yashas-ravi/" >
+              <img src="Images/Link.png" alt="LinkedIn logo">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+      let image = document.querySelector(".Imme");
+      image.style.opacity = 0;
+
+      var tick = function () {
+        image.style.opacity = +image.style.opacity + 0.01;
+        if (image.style.opacity <= 1) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+        }
+      };
+
+      tick();
+
+      let t1 = document.querySelector(".txt1");
+      let t2 = document.querySelector(".txt2");
+      let in1 = document.querySelector("#click1");
+      let in2 = document.querySelector("#click2");
+
+
+      //t2.style.marginLeft = "-600px";
+
+
+      in1.addEventListener("click", f1);
+      in2.addEventListener("click", f2);
+
+      let index1 = 0;
+
+      function f1() {
+        if (index1 == 0 /*&& t1.style.marginLeft <= "-600px"*/) {
+
+          in1.removeEventListener("click", f1);
+          t1.style.display = "block";
+          t1.style.marginTop = "-50px";
+          t1.style.marginLeft = "-600px";
+          t1.style.width = "90%";
+          document.querySelector(".arrow1").src = "Images/arr2.png";
+          var id = setInterval(frame, 5);
+          let pos = -600;
+
+          function frame() {
+            if (pos >= 10) {
+              console.log(pos);
+              in1.addEventListener("click", f1);
+              clearInterval(id);
+            } else {
+              pos+=3;
+              t1.style.marginLeft = pos + "px";
+            }
+          }
+
+          index1 = 1;
+
+        }
+        else if (index1 == 1){
+          in1.removeEventListener("click", f1);
+          document.querySelector(".arrow1").src = "Images/arr1.png";
+          index1 = 0; //
+          var id = setInterval(frame, 5);
+          let pos = 10;
+          function frame() {
+            if (pos <= -600) {
+              in1.addEventListener("click", f1);
+              clearInterval(id);
+              t1.style.display = "none";
+            } else {
+              pos-=3;
+              t1.style.marginLeft = pos + "px";
+            }
+          }
+
+        }
+
+      }
+
+      let index2 = 0;
+
+      function f2 () {
+        if (index2  == 0) {
+          in2.removeEventListener("click", f2);
+          t2.style.display = "block";
+          t2.style.marginTop = "-50px";
+          t2.style.marginLeft = "-600px";
+          t2.style.width = "90%";
+          document.querySelector(".arrow2").src = "Images/arr2.png";
+          var id = setInterval(frame, 5);
+          let pos = -600;
+          function frame() {
+            if (pos >= 10) {
+              in2.addEventListener("click", f2);
+              clearInterval(id);
+            } else {
+              pos+=5;
+              t2.style.marginLeft = pos + "px";
+            }
+          }
+          index2 = 1;
+        }
+        else if (index2 == 1) {
+          in2.removeEventListener("click", f2);
+          document.querySelector(".arrow2").src = "Images/arr1.png";
+          var id = setInterval(frame, 5);
+          let pos = 10;
+          function frame() {
+            if (pos <= -1600) {
+              in2.addEventListener("click", f2);
+              clearInterval(id);
+              t2.style.display = "none";
+            } else {
+              pos-=6;
+              t2.style.marginLeft = pos + "px";
+            }
+          }
+
+          index2 = 0;
+        }
+
+
+      }
+
+
+
+    </script>
+
+</body>
+</html>

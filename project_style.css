@@ -1,0 +1,716 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*My Code*/
+* {
+  text-decoration: none;
+  background-color: black;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.AboutMe_main {
+  padding-top: 100px;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+header {
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+}
+
+header .header-brand {
+  font-family: 'Gowun Batang', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: #111;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header .header-brand:hover {
+  color: red;
+}
+
+header nav ul {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+header nav ul li {
+  display: inline-block;
+  float: left;
+  list-style: none;
+  padding: 0 16px;
+}
+
+header nav ul li a {
+  font-family: 'Gowun Batang', serif;
+  font-size: 16px;
+  color: #111;
+}
+
+header nav ul li a:hover {
+  color: red;
+}
+
+header .header-cases {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  header .header-brand {
+    margin: 31px 0px;
+    text-align: left;
+    line-height: 38px;
+    padding: 0px 20px 0px 40px;
+    border-right: 3px solid #111;
+    float: left;
+  }
+
+  header nav ul {
+    float: left;
+    margin: 20px 0px 0px 20px;
+  }
+
+  header nav ul li a {
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+
+  header .header-cases {
+    display: block;
+    font-family: 'Gowun Batang', serif;
+    font-size: 16px;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 38px;
+    border: 1px solid #111;
+    float: right;
+    margin-right: 40px;
+    margin-top: 30px;
+    padding: 0px 20px;
+  }
+
+  header .header-cases:hover {
+    color: red;
+    border: 2px solid red;
+  }
+
+}
+
+/*INDEX*/
+.index-banner {
+  width: 100%;
+  height: calc(100vh - 100px);
+  /*background-image: url(Images/BSC.png);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: red;
+  display: table;
+}
+
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.index-banner h2 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+  padding: 10px 0px 0px 0px;
+}
+
+.index-banner h3 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 100;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+  padding: 30px 0px 0px 0px;
+}
+
+.index-banner h4 {
+  text-align: center;
+  color: white;
+  font-family: 'Gowun Batang', serif;
+  font-size: 15px;
+  text-shadow: 2px 2px 8px #111;
+}
+
+
+.index-links div {
+  margin: 16px 16px 10px 10px;
+  width: 100%
+  height: 100px;
+  background-color: #f2f2f2;
+}
+
+.index-links div h3 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 100px;
+  color: #111;
+  text-align: center;
+  text-shadow: 1px 1px 2px #111;
+  padding: 10px 0px 0px 0px;
+  text-transform: uppercase;
+}
+
+.index-links div h3:hover {
+  color: blue;
+}
+
+  @media only screen and (min-width: 1000px) {
+    .index-banner {
+      width: 100%;
+      height: 500px;
+      /*background-image: url(Images/BSC.png);*/
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: red;
+      display: table;s
+    }
+
+    .index-banner h3 {
+      display: block;
+      width: 560px;
+      margin: 0 auto;
+    }
+
+    .index-links div {
+      display: inline-block;
+      margin: 16px 16px 16px 16px;
+      /*margin: 10px 10px 0px 0px;*/
+      width: calc((100% - 9*16px)/4);
+      height: 150px;
+    }
+
+    .index-links div h3 {
+      font-size: 20px;
+      line-height: 150px;
+    }
+
+  }
+
+  .contacts {
+    display: inline-block;
+  }
+
+  .contacts h1 {
+    float: left;
+    color: white;
+    margin-left: 40px;
+    font-size: 20px;
+  }
+
+  .contacts img {
+    display: none;
+  }
+
+  #textdir1, #textdir2 {
+    color: white;
+    /*margin-left: 30px;*/
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  #tbox {
+    /*margin-left: 30px;*/
+    background-color: yellow;
+  }
+
+  #sub {
+    visibility: visible;
+    color: yellow;
+    display: block;
+    /*margin-left: 30px;*/
+    margin-top: 20px;
+
+    /*margin-top: 10px;*/
+  }
+
+  .link:visited {color:yellow;}
+
+  /*PORTFOLIO PAGE*/
+
+  .portText {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: lightblue;
+    color: blue;
+  }
+
+  .Example {
+    background-color: lightblue;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .Example h2 {
+      color: brown;
+  }
+
+  .Example h2:hover {
+    color: black;
+  }
+
+  .image {
+    /*displsay: none;*/
+    background-color: lightblue;
+    /*display: inline-block;*/
+  }
+
+  .image img  {
+    margin-left: 20px;
+    margin-top: 30px;
+    border: 3px solid brown;
+    width: 75%;
+  }
+
+  .image textarea, button, .HintTrack, .hint {
+    visibility: hidden;
+  }
+
+  .image textarea {
+    background-color: lightgreen;
+    position:relative;
+    resize: none;
+    top: 20px;
+    left: 8%;
+    width: 80%;
+    height: 20px;
+  }
+
+  .image button {
+    color: lightgreen;
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 8%;
+    bottom: 20px;
+  }
+
+  .image .HintTrack {
+    position: relative;
+    top: 30px;
+    left: 8%;
+    margin-bottom: 20px;
+  }
+
+  .image .hint {
+    width: 80%;
+  }
+
+  @media only screen and (min-width: 900px) {
+    .image .hint {
+      width: 50%;
+    }
+
+    .image .maths1 {
+      width: 70%;
+    }
+
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .image .maths1 {
+      width: 30%;
+    }
+
+    .image .HintTrack {
+      display: inline-block;
+      position: relative;
+      top: -460px; /*-460*/
+      left: -4.6%; /*-70*/
+      font-weight: bold;
+    }
+
+    .image .hint {
+      display: inline-block;
+      position: relative;
+      top: -450px; /*-450*/
+      left: 32.9%; /*-500*/
+      border: 3px solid brown;
+      width: 30%;
+
+    }
+
+    .image textarea {
+      display: inline-block;
+      background-color: lightgreen;
+      resize: none;
+      width: 120px;
+      height: 20px;
+      position: relative;
+      left: 3.29%; /*50*/
+      top: -510px; /*-510*/
+    }
+
+    .image button {
+      display: inline-block;
+      position: relative;
+      color: lightgreen;
+      left: -5.26%; /*-80, -5.26*/
+      top: -460px; /*-460*/
+    }
+
+  }
+
+  .image img:hover {
+    border: 3px solid black;
+  }
+
+  .MVideo {
+    background-color: lightblue;
+  }
+
+  .MVideo img {
+    margin-left: 20px;
+    margin-top: 30px;
+    border: 3px solid brown;
+    width: 75%;
+  }
+
+  .MVideo img:hover {
+    border: 3px solid black;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .portText, .Example {
+      padding-left: 80px;
+    }
+
+    .image img {
+      margin-left: 80px;
+      width: 30%;
+    }
+
+    .MVideo img  {
+      margin-left: 80px;
+      width: 30%;
+    }
+  }
+
+/*CASES*/
+  .cases-links {
+    padding-left: 100px;
+    padding-right: 80px;
+    background-color: #f3f3f3;
+  }
+
+  .cases-links .cases-link {
+    float: left;
+    margin: 20px 20px 20px 20px;
+    width: calc((100% - 180px)/4);
+    height: 200px;
+    background-color: #e3e3e3;
+  }
+
+  .cases-links h2 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 100px;
+    color: #111;
+    text-align: center;
+    text-shadow: 1px 1px 2px #111;
+    padding: 10px 0px 0px 0px;
+    text-transform: uppercase;
+  }
+
+  .cases-links .cases-link p {
+    line-height: 100px;
+    font-family: 'Gowun Batang', serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #111;
+    text-align: center;
+    text-shadow: 1px 1px 2px #111;
+    padding: 10px 0px 0px 0px;
+    text-transform: uppercase;
+  }
+
+/*FOOTER*/
+
+footer {
+  width: calc(100% - 80px);
+  padding: 40px 40px;
+  background-color: #111;
+  overflow: hidden;
+}
+
+
+footer ul {
+  width: fit-content;
+  float: left;
+
+}
+
+footer ul li {
+  display: block;
+  list-style: none;
+}
+
+footer ul li a {
+  font-family: 'Gowun Batang', serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+
+footer ul li a:hover {
+  color: yellow;
+}
+
+.footer-sm {
+  padding-top: 10px;
+  width: 50px;
+  float: right;
+}
+
+.footer-sm img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-sm img:hover {
+  border: 3px solid #ffff00;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer ul li a {
+    line-height: 45px;
+    padding: 10px;
+  }
+
+  .footer-sm {
+    width: 100px;
+    float: right;
+  }
+
+  .footer-sm img {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .contacts img {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 40px;
+    border: 5px solid #ffff00;
+    float: right;
+    width: 50%;
+  }
+
+}
+
+.AboutMe_main {
+  background-color: black;
+  background-size: 100%;
+  margin: 0px;
+}
+
+.AboutMe_main img {
+  width: 25%;
+  margin: 30px calc(75% * 0.5);
+  border: 3px solid #ffff00;
+}
+
+.AboutMe_main h1 {
+  color: yellow;
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+.AboutMe_main h2 {
+  padding: 10px 20px 30px 20px;
+  color: white;
+  line-height: 30px;
+  font-family: sans-serif;
+}
+
+.AboutMe_main h2 .about1, .about2, .about3 {
+    font-family: 'Gowun Batang', serif;
+    padding-top: 20px;
+    font-size: 20px;
+    color: lightblue;
+}
+
+.AboutMe_main .about2:hover, .about3:hover {
+  color: lightgreen;
+}
+
+.AboutMe_main .arrow1 {
+  border: none;
+  margin-left: 0.1%;
+  margin-bottom: 0px;
+  width: 3%;
+}
+
+.AboutMe_main .arrow2 {
+  border: none;
+  margin-left: 0.1%;
+  margin-bottom: 0px;
+  width: 3%;
+}
+
+.AboutMe_main .txt1, .txt2 {
+    padding-top: 20px;
+    display: none;
+}
+
+#em {
+  display: block;
+  background-color: yellow;
+
+}
+
+@media only screen and (min-width: 400px) {
+
+.AboutMe_main .arrow1, .arrow2 {
+  margin-left: 1%;
+}
+
+  /*.AboutMe_main img {
+    width: 25%;
+    margin: 30px 640px 20px 560px;
+    border: 3px solid #ffff00;
+  }*/
+}
+
+
+}

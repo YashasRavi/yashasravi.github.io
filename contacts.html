@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yashas Ravi - Contacts</title>
+  <meta charset="UTF-8">
+    <meta name="description" content="This is the contact me page of my website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href = "project_style.css">
+<head>
+<body>
+  <header>
+    <a class = "header-brand" href="index.html">Yashas Ravi</a>
+    <nav>
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="index.html">Main</a></li>
+      </ul>
+        <!--<a class = "header-cases" href="cases.html">Cases</a>-->
+    </nav>
+  </header>
+  <main>
+    <div class="contacts">
+      <h1>
+        <br>
+        <br>
+        Email: yashas.ravi.nj@gmail.com
+        <br>
+        <br>
+        Phone: (908)-230-9502
+        <br>
+        <br>
+        <br>
+        <a href=" https://www.linkedin.com/in/yashas-ravi/"  class = "link">My LinkedIn</a>
+        <br>
+        <br>
+        <a href="https://www.instagram.com/yashas.ravi.nj/"  class = "link">My Instagram</a>
+        <br>
+        <br>
+        <a href="https://github.com/YashasRavi"  class = "link">My Github</a>
+        <br>
+        <br>
+        <br>
+      </h1>
+      <img src="Images/contact.png" alt="contacts">
+    </div>
+    <h2 class = "butt" id = "textdir1">
+      Send me a message or question!! :)
+    </h2>
+
+      <textarea class="butt" id = "tbox" name="message" rows="8" cols = "35" placeholder="Write a message">
+      </textarea>
+
+      <h2 class = "butt" id = "textdir2">
+       What's your email?
+      </h2>
+
+      <textarea class="butt" id = "em" name="message" rows="1" cols = "35" placeholder="What is your email?">
+      </textarea>
+
+      <button class = "butt" id = "sub" type = "submit" name="submit">Submit</button>
+
+
+  </main>
+
+  <footer>
+      <ul>
+        <li>
+          <a href="index.html" >Main</a>
+        </li>
+        <!--<li>
+          <a href="cases.html">Cases</a>
+        </li>-->
+        <li>
+          <a href="portfolio.html" >Portfolio</a>
+        </li>
+        <li>
+          <a href="aboutme.html" >About me</a>
+        </li>
+        <li>
+          <a href="contacts.html" >Contacts</a>
+        </li>
+      </ul>
+
+      <div class = "footer-sm">
+          <a href="https://www.instagram.com/yashas.ravi.nj/" >
+            <img src="Images/Insta.png" alt="Instagram logo">
+          </a>
+          <a href="https://www.linkedin.com/in/yashas-ravi/" >
+            <img src="Images/Link.png" alt="LinkedIn logo">
+          </a>
+      </div>
+  </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script>
+  //ANIMATES TEXT BOX
+    let textInput = document.querySelectorAll(".butt");
+    let ques1 = document.querySelector("#textdir1");
+    let ques2 = document.querySelector("#textdir2");
+    let mes = document.querySelector("#tbox");
+    let email = document.querySelector("#em");
+    let submit = document.querySelector("#sub");
+    submit.addEventListener("click", f1);
+
+    textInput.forEach((e) => {
+      //Slides all the text into the screen!!
+      e.style.marginLeft = "-600px";
+      var id = setInterval(frame, 5);
+      let pos = -600;
+      function frame() {
+        if (pos >= 30) {
+          clearInterval(id);
+        } else {
+          pos+=3;
+          e.style.marginLeft = pos + "px";
+        }
+      }
+    });
+
+    function f1 () {
+      alert("Hello! Thanks for messaging me! Right now I haven't configured a database yet to store user input, so feel free to directly email me at yashas.ravi.nj@gmail.com or text me at 908-230-9502!");
+    }
+
+
+  //https://www.youtube.com/watch?v=NxVCq4p0Kb0
+
+  </script>
+
+</body>
+</html>

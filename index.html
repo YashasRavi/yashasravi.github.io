@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yashas Ravi - Home</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="This is the main page of my website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href = "project_style.css">
+<head>
+<body>
+  <header>
+    <a class = "header-brand" href="index.html" >Yashas Ravi</a>
+    <nav>
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+        <!--<a class = "header-cases" href="cases.html">Cases</a>-->
+    </nav>
+  </header>
+
+  <main>
+    <section class = "index-banner">
+      <div class = "vertical-center">
+        <h2 class = "txt">
+          I am an ethusiast of Programming, <br> Biology, and Mathematics.
+        </h2>
+        <h3 class = "txt">
+          I have had extensive exposure in Cell Biology, Genetics, and Physiology, as well as 5+ years of programming experience.
+        </h3>
+        <br>
+        <br>
+        <h4 class = "txt">
+          Fun Fact: I made this website entirely using HTML/CSS/JavaScript!
+        </h4>
+
+      </div>
+    </section>
+
+    <!--
+    <section class = "index-links">
+      <a href="cases.html">
+        <div class = "BoxL1">
+          <h3>Cases</h3>
+        </div>
+      </a>
+
+      <a href="portfolio.html">
+        <div class = "BoxL2">
+          <h3>Portfolio</h3>
+        </div>
+      </a>
+
+      <a href="aboutme.html">
+        <div class = "BoxL3">
+          <h3>About</h3>
+        </div>
+      </a>
+
+      <a href="contacts.html">
+        <div class = "BoxL4">
+          <h3>Contact</h3>
+        </div>
+      </a>
+
+    </section>
+  -->
+  </main>
+
+  <footer>
+      <ul>
+        <li>
+          <a href="index.html">Main</a>
+        </li>
+        <!--<li>
+          <a href="cases.html">Cases</a>
+        </li>-->
+        <li>
+          <a href="portfolio.html" >Portfolio</a>
+        </li>
+        <li>
+          <a href="aboutme.html" >About me</a>
+        </li>
+        <li>
+          <a href="contacts.html" >Contacts</a>
+        </li>
+      </ul>
+
+      <div class = "footer-sm">
+          <a href="https://www.instagram.com/yashas.ravi.nj/" >
+            <img src="Images/Insta.png" alt="Instagram logo">
+          </a>
+          <a href="https://www.linkedin.com/in/yashas-ravi/" >
+            <img src="Images/Link.png" alt="LinkedIn logo">
+          </a>
+      </div>
+  </footer>
+
+  <script>
+
+    let img1 = document.createElement("img");
+    img1.className = "i1";
+    img1.src = "Images/CalcCode.png";
+
+
+    let img2 = document.createElement("img");
+    img2.className = "i2";
+    img2.src = "Images/dna.jpg";
+
+
+    let img3 = document.createElement("img");
+    img3.className = "i3";
+    img3.src = "Images/MathStuff.png";
+
+    let text = document.querySelectorAll(".txt");
+
+
+    var mq = window.matchMedia( "(min-width: 1200px)" );
+      if (mq.matches) {
+        console.log("WORKS");
+        document.querySelector(".index-banner").appendChild(img1);
+        img1.style.opacity = 0;
+        document.querySelector(".index-banner").appendChild(img2);
+        img2.style.opacity = 0;
+        document.querySelector(".index-banner").appendChild(img3);
+        img3.style.opacity = 0;
+
+        img1.style.width = "300px";
+        img1.style.margin = "20px";
+        img1.style.marginTop = "50px";
+        img1.style.float = "right";
+        img1.style.border = "thick solid yellow";
+
+        img2.style.width = "300px";
+        img2.style.float = "right";
+        img2.style.marginTop = "150px";
+        img2.style.marginRight = "-15px";
+        img2.style.border = "thick solid orange";
+
+        img3.style.width = "250px";
+        img3.style.marginTop = "50px";
+        img3.style.float = "right";
+        img3.style.marginRight = "5px";
+        img3.style.border = "thick solid purple";
+
+        text.forEach((e) => {
+          //Slides all the text into the screen!!
+          e.style.marginLeft = "-600px";
+          var id = setInterval(frame, 5);
+          let pos = -600;
+          function frame() {
+            if (pos >= 10) {
+              clearInterval(id);
+            } else {
+              pos+=3;
+              e.style.marginLeft = pos + "px";
+            }
+          }
+        });
+
+      }
+
+
+
+  //MAKES THE IMAGE FADE IN
+    var tick1 = function () {
+      img1.style.opacity = +img1.style.opacity + 0.01;
+      if (img1.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick1)) || setTimeout(tick1, 16);
+      }
+    };
+
+
+
+    var tick2 = function () {
+      img2.style.opacity = +img2.style.opacity + 0.01;
+      if (img2.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick2)) || setTimeout(tick2, 16);
+      }
+    };
+
+    var tick3 = function () {
+      img3.style.opacity = +img3.style.opacity + 0.01;
+      if (img3.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick3)) || setTimeout(tick3, 16);
+      }
+    };
+
+    tick1();
+    tick2();
+    tick3();
+
+
+  </script>
+
+</body>
+</html>

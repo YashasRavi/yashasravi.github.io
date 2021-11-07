@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yashas Ravi - Portfolio</title>
+  <meta charset="UTF-8">
+    <meta name="description" content="This is the portfolio page of my website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href = "project_style.css">
+<head>
+<body>
+  <header>
+    <a class = "header-brand" href="index.html" >Yashas Ravi</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+        <!--<a class = "header-cases" href="cases.html">Cases</a>-->
+    </nav>
+  </header>
+  <main>
+
+    <h1 class = "portText">
+      On this page I will display some of the previous projects I have compelted (or am working on), as well as some other things I created!
+    </h1>
+
+    <div class = "image">
+      <a href="https://github.com/YashasRavi/Graphing-Calculator-for-Lines-and-Circles.git" >
+        <img src="Images/GraphImg.png" alt="Hard math question">
+      </a>
+
+    </div>
+
+    <div class = "Example">
+      <a href="https://github.com/YashasRavi/Graphing-Calculator-for-Lines-and-Circles.git" >
+        <h2>
+          PROJECT 1: Graphing Calculator for Lines and Circles -
+          <br>
+          <br>
+          I used JavaScript to create a Graphing Calculator that can graph lines (given slope and y-intercept as inputs) and circles (given coordinates of center and radius as inputs).
+          <br>
+          <br>
+          The program also utilizes mathematical formulas to compute intersections between different lines and circles. The image is basically showing a snippet of code that outputs the aforementioned intersection points. Feel free to view my code in the Github (click on this text or the image to access)!
+          <br>
+          <br>
+          Unfortunately, the project was created on a school account on code.org, and the account recently got disabled so I can't directly link the project from code.org :(.
+        </h2>
+      </a>
+    </div>
+
+    <div class = "MVideo">
+        <a href="https://www.youtube.com/watch?v=7Rexe83fZH0" >
+          <img src="Images/MastermindImg.png" alt="Mastermind">
+        </a>
+    </div>
+
+
+    <div class = "Example">
+      <a href="https://www.youtube.com/watch?v=7Rexe83fZH0" >
+        <h2>
+          PROJECT 2: Mastermind -
+          <br>
+          <br>
+          This is a project I am currently working on right now. It is basically a game where users unlock "nodes" by answering questions related to STEM!
+          <br>
+          <br>
+          Each "node" represents a specific STEM field (ex: Biology, Chemistry, Mathematics, etc), and "links" between nodes have questions that relate the fields between those nodes!
+          <br>
+          <br>
+          For example, the link between Biology and Chemistry would have a question that requires concepts from Biology and Chemistry to answer!
+          <br>
+          <br>
+          I personally love applying concepts from different fields, so creating this project was very enjoyable for me!
+          <br>
+          I am still working on it, and the Youtube Video (click on this text to access) basically shows a prototype that I submitted to a hackathon (HackRU, 2nd place prize for Education track :D)
+        </h2>
+      </a>
+    </div>
+
+
+    <h1 class = "portText">
+      I'll be adding more projects as I make them!
+      <br>
+      <br>
+      Here are some cool math problems I've made!
+      Click on the image if you think you want to give this one (my favorite so far) a try! :)
+    </h1>
+
+    <div class = "image" id = "Image">
+        <img class = "maths1" src="Images/maths1.png" alt="Hard math question">
+        <textarea class = "MathAns" name="message" rows="8" cols = "35" placeholder="Answer">
+        </textarea>
+        <button class = "subB" type = "submit" name="submit">Submit</button>
+        <button class = "hintB" type = "submit" name="submit">Get a New Hint</button>
+        <button class = "left" type = "submit" name="submit">Previous Hint</button>
+        <button class = "right" type = "submit" name="submit">Next Hint</button>
+        <p class = "HintTrack">No Hints used yet!</p>
+        <img class = "hint" src="Images/Hint1.png" alt="Math problem hint">
+        <!--<img class = "hint2" src="Images/Hint2.png" alt="Math problem hint">
+        <img class = "hint3" src="Images/Hint3.png" alt="Math problem hint">
+        <img class = "hint4" src="Images/Hint4.png" alt="Math problem hint">
+        <img class = "hint5" src="Images/Hint5.png" alt="Math problem hint">
+        <img class = "hint6" src="Images/Hint6.png" alt="Math problem hint">
+        <img class = "hint7" src="Images/Hint7.png" alt="Math problem hint">
+        -->
+
+
+    </div>
+
+    <div class = "whichHint">
+
+    </div>
+
+  </main>
+  <footer>
+      <ul>
+        <li>
+          <a href="index.html">Main</a>
+        </li>
+        <!--<li>
+          <a href="cases.html">Cases</a>
+        </li>-->
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a href="aboutme.html">About me</a>
+        </li>
+        <li>
+          <a href="contacts.html">Contacts</a>
+        </li>
+      </ul>
+
+      <div class = "footer-sm">
+          <a href="https://www.instagram.com/yashas.ravi.nj/" >
+            <img src="Images/Insta.png" alt="Instagram logo">
+          </a>
+          <a href="https://www.linkedin.com/in/yashas-ravi/" >
+            <img src="Images/Link.png" alt="LinkedIn logo">
+          </a>
+      </div>
+  </footer>
+  <script>
+    let mathImg = document.querySelector(".maths1");
+    let ans = document.querySelector(".MathAns");
+    let subB = document.querySelector(".subB");
+    let hintB = document.querySelector(".hintB");
+    let next = document.querySelector(".right");
+    let prev = document.querySelector(".left");
+    let h = document.querySelector(".hint");
+    let ht = document.querySelector(".HintTrack");
+    let hintLinks = ["null", "Images/Hint1.png", "Images/Hint2.png", "Images/Hint3.png", "Images/Hint4.png", "Images/Hint5.png", "Images/Hint6.png", "Images/Hint7.png"];
+    //subB.style.visibility = "visible";
+
+    mathImg.addEventListener("click", showStuff);
+
+    function showStuff () {
+      ans.style.visibility = "visible";
+      subB.style.visibility = "visible";
+      hintB.style.visibility = "visible";
+      next.style.visibility = "visible";
+      prev.style.visibility = "visible";
+      ht.style.visibility = "visible";
+    }
+
+    subB.addEventListener("click", MathSub);
+
+    function MathSub () {
+      if (ans.value == 14) {
+        alert("You got it right!");
+      }
+      else {
+        alert('Try again! Click the "Get Hint" button if you need help!');
+      }
+    }
+
+    //Image.style.backgroundColor = "white";
+
+
+    let hintNum = 0;
+    let hintCount = 0;
+
+    function changeHintMsg () {
+      if (hintNum == 0 && hintCount == 0) {
+          ht.innerHTML = "No Hints used yet!";
+      }
+      else {
+          ht.innerHTML = "Hint: " + hintNum + " / " + hintCount;
+      }
+    }
+
+    let Hintclicks = 0;
+
+    hintB.addEventListener("click", showHint);
+
+    function showHint() {
+        if (Hintclicks < 7) {
+          Hintclicks++;
+          h.style.visibility = "visible";
+          h.src = hintLinks[Hintclicks];
+          hintNum = Hintclicks;
+          hintCount = Hintclicks;
+          changeHintMsg();
+        }
+        else if (Hintclicks != 6) {
+          alert('No more hints! If you want to go to a previous hint, click "Previous Hint". The answer is in Hint #7! :)');
+        }
+    }
+
+    next.addEventListener("click", nextHint);
+
+    function nextHint () {
+      if (hintNum < Hintclicks) {
+        hintNum++;
+        h.src = hintLinks[hintNum]
+        changeHintMsg();
+      }
+      else {
+        alert('Click "Get a New Hint"!');
+      }
+    }
+
+    prev.addEventListener("click", prevHint);
+
+    function prevHint () {
+      if (hintNum > 1) {
+        hintNum--;
+        h.src = hintLinks[hintNum];
+        changeHintMsg();
+      }
+      else {
+        alert('Please click "Get a New Hint" or "Next Hint"!');
+      }
+
+    }
+
+
+
+
+    /* SCROLL-FADE: https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
+    let img2 = document.querySelector(".MVideo");
+    img2.style.opacity = 0;
+
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    function fadeIn(scrollPos) {
+      if (scrollPos > 1000) {
+        var tickImg = function () {
+          img2.style.opacity = +img2.style.opacity + 0.01;
+          if (img1.style.opacity <= 1) {
+              (window.requestAnimationFrame && requestAnimationFrame(tickImg)) || setTimeout(tickImg, 16);
+          }
+        };
+      }
+    }
+
+      document.addEventListener('scroll', function(e) {
+      lastKnownScrollPosition = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          fadeIn(lastKnownScrollPosition);
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    });
+    */
+
+
+  </script>
+
+
+</body>
+</html>
