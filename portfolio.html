@@ -23,23 +23,52 @@
         <!--<a class = "header-cases" href="cases.html">Cases</a>-->
     </nav>
   </header>
-  <main>
+  <main class = "PortMain">
 
     <h1 class = "portText">
       On this page I will display some of the previous projects I have compelted (or am working on), as well as some other things I created!
     </h1>
 
-    <div class = "image">
-      <a href="https://github.com/YashasRavi/Graphing-Calculator-for-Lines-and-Circles.git" >
+    <div class = "MVideo" id = "MastMind">
+        <a href="https://www.youtube.com/watch?v=n-W-Cr9yZK0" target="_blank" rel="noopener noreferrer">
+          <img src="Images/MastermindImg.png" alt="Mastermind">
+        </a>
+    </div>
+
+
+    <div class = "Example">
+      <a href="https://www.youtube.com/watch?v=n-W-Cr9yZK0" target="_blank" rel="noopener noreferrer">
+        <h2>
+          PROJECT 1: Mastermind (Started 10/21, Completed 1/2022) -
+          <br>
+          <br>
+           Mastermind is a dynamic web project which encourages users to apply concepts from different fields of STEM. The game also has a point system, user profiles and accounts, and levels of ascending rigor to enhance and enrich the user experience. I created this project using HTML, CSS, Javascript, JSP, Java, and Bootstrap.
+          <br>
+          <br>
+          Each level has 10 nodes, and each "node" represents a specific STEM concept (ex: Primes, Quadratics, Rate Laws, etc). There are connections ("links") between nodes have questions that relate the concepts represented by those nodes!
+          <br>
+          <br>
+          For example, the link between nodes titled "F = ma" and "Functions" would have questions that require Newton's 2nd Law and mathematical functions to answer!
+          <br>
+          <br>
+          I personally love applying concepts from different fields, so creating this project was very enjoyable for me!
+          <br>
+          The YouTube Video (click on this text to access) basically shows a demonstration on how the game works!
+        </h2>
+      </a>
+    </div>
+
+    <div class = "image" id = "GraphCalc">
+      <a href="https://github.com/YashasRavi/Graphing-Calculator-for-Lines-and-Circles.git" target="_blank" rel="noopener noreferrer">
         <img src="Images/GraphImg.png" alt="Hard math question">
       </a>
 
     </div>
 
     <div class = "Example">
-      <a href="https://github.com/YashasRavi/Graphing-Calculator-for-Lines-and-Circles.git" >
+      <a href="https://github.com/YashasRavi/Graphing-Calculator-for-Lines-and-Circles.git" target="_blank" rel="noopener noreferrer">
         <h2>
-          PROJECT 1: Graphing Calculator for Lines and Circles -
+          PROJECT 2: Graphing Calculator for Lines and Circles (Started 4/2020, Completed 5/2020) -
           <br>
           <br>
           I used JavaScript to create a Graphing Calculator that can graph lines (given slope and y-intercept as inputs) and circles (given coordinates of center and radius as inputs).
@@ -52,36 +81,6 @@
         </h2>
       </a>
     </div>
-
-    <div class = "MVideo">
-        <a href="https://www.youtube.com/watch?v=7Rexe83fZH0" >
-          <img src="Images/MastermindImg.png" alt="Mastermind">
-        </a>
-    </div>
-
-
-    <div class = "Example">
-      <a href="https://www.youtube.com/watch?v=7Rexe83fZH0" >
-        <h2>
-          PROJECT 2: Mastermind -
-          <br>
-          <br>
-          This is a project I am currently working on right now. It is basically a game where users unlock "nodes" by answering questions related to STEM!
-          <br>
-          <br>
-          Each "node" represents a specific STEM field (ex: Biology, Chemistry, Mathematics, etc), and "links" between nodes have questions that relate the fields between those nodes!
-          <br>
-          <br>
-          For example, the link between Biology and Chemistry would have a question that requires concepts from Biology and Chemistry to answer!
-          <br>
-          <br>
-          I personally love applying concepts from different fields, so creating this project was very enjoyable for me!
-          <br>
-          I am still working on it, and the Youtube Video (click on this text to access) basically shows a prototype that I submitted to a hackathon (HackRU, 2nd place prize for Education track :D)
-        </h2>
-      </a>
-    </div>
-
 
     <h1 class = "portText">
       I'll be adding more projects as I make them!
@@ -143,8 +142,12 @@
           <a href="https://www.linkedin.com/in/yashas-ravi/" >
             <img src="Images/Link.png" alt="LinkedIn logo">
           </a>
+          <a href="https://github.com/YashasRavi" >
+            <img src="Images/gitLogo.png" alt="GitHub logo">
+          </a>
       </div>
   </footer>
+
   <script>
     let mathImg = document.querySelector(".maths1");
     let ans = document.querySelector(".MathAns");
@@ -156,6 +159,84 @@
     let ht = document.querySelector(".HintTrack");
     let hintLinks = ["null", "Images/Hint1.png", "Images/Hint2.png", "Images/Hint3.png", "Images/Hint4.png", "Images/Hint5.png", "Images/Hint6.png", "Images/Hint7.png"];
     //subB.style.visibility = "visible";
+    let ex = document.querySelectorAll(".Example");
+    let pT = document.querySelectorAll(".portText");
+
+    ex.forEach((e) => {
+      //Slides all the text into the screen!!
+      //e.style.display = "block";
+      e.style.marginLeft = "-1500px";
+      var id = setInterval(frame, 5);
+      let pos = -1500;
+      function frame() {
+        if (pos >= 0) {
+          clearInterval(id);
+        } else {
+          pos+=4;
+          e.style.marginLeft = pos + "px";
+        }
+      }
+    });
+
+    pT.forEach((e) => {
+      //Slides all the text into the screen!!
+      //e.style.display = "block";
+      e.style.marginLeft = "-1500px";
+
+      var id = setInterval(frame, 5);
+      let pos = -1500;
+      function frame() {
+        if (pos >= 0) {
+          clearInterval(id);
+        } else {
+          pos+=4;
+          e.style.marginLeft = pos + "px";
+        }
+      }
+    });
+
+  let img = document.querySelector("#GraphCalc");
+  let mv = document.querySelector(".MVideo");
+
+    //Slides all the text into the screen!!
+    //e.style.display = "block";
+    img.style.marginLeft = "-1500px";
+    mv.style.marginLeft = "-1500px";
+    var id = setInterval(frame, 5);
+    let pos = -1500;
+    function frame() {
+      if (pos >= 0) {
+        clearInterval(id);
+      } else {
+        pos+=5;
+        img.style.marginLeft = pos + "px";
+        mv.style.marginLeft = pos + "px";
+      }
+    }
+
+
+    /*
+    let GraphCalcImg = document.querySelector("#GraphCalc");
+    let MastermindImg = document.querySelector("#MastMind");
+    let MathImg = document.querySelector("#Image");
+
+
+    GraphCalcImg.style.opacity = 0;
+    MastermindImg.style.opacity = 0;
+    MathImg.style.opacity = 0;
+
+    var tick1 = function () {
+      GraphCalcImg.style.opacity = +GraphCalcImg.style.opacity + 0.01;
+      MastermindImg.style.opacity = +GraphCalcImg.style.opacity + 0.01;
+      MathImg.style.opacity = +GraphCalcImg.style.opacity + 0.01;
+
+      if (GraphCalcImg.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick1)) || setTimeout(tick1, 16);
+      }
+    };
+
+    tick1();
+    */
 
     mathImg.addEventListener("click", showStuff);
 

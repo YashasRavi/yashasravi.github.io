@@ -24,17 +24,19 @@
     </nav>
   </header>
 
-    <div  class = "AboutMe_main">
-      <h1>
-        Yashas Ravi
-      </h1>
-      <img class = "Imme" src="Images/MyPic.png" alt="picture">
-      <h2>
-        <div class = "about1">
-          I am a first-year student planning to double major in Computer Science and Biomathematics at Rutgers University, New Brunswick. I am passionate about Mathematics, Biology, and Computer Science, and I would love to use computer algorithms to model physical as well as abstract systems. Furthermore, I enjoy software development, implementation, and programming! I also love being a team member and using my creativity to make an impact on my peers.
-          <br>
-          <br>
-        </div>
+    <div class = "AboutMe_main">
+      <!--<div class = "AboutMe_intro">-->
+
+        <h1>
+          Yashas Ravi
+        </h1>
+        <img class = "Imme" src="Images/MyPic.png" alt="picture" style="box-shadow: 1px 1px 10px lightgreen;">
+        <h2>
+          <div class = "about1">
+            I am a first-year student planning to double major in Computer Science and Biomathematics at Rutgers University, New Brunswick. I am passionate about Computer Science, Mathematics, and Biology, and I would love to use computer algorithms to model physical as well as abstract systems. Furthermore, I enjoy software development, implementation, and programming! I also love being a team member and using my creativity to make an impact on my peers.
+            <br>
+            <br>
+          </div><!--</div>-->
 
         <div id = "click1" class = "about2">
           Click here for some information about me!
@@ -46,7 +48,7 @@
           - For fun, I love watching YouTube! I usually watch clips from movies and TV Shows. My favorite TV Show is The Big Bang Theory!
           <br>
           <br>
-          - I love listening to music! My favorite song is probably Shape of You by Ed Sheeran :D
+          - I love listening to music! My favorite song is probably "Shape of You" by Ed Sheeran :D
           <br>
           <br>
           - I like animals a lot! I enjoy spending time with dogs and cats, although unfortunately I never had a pet myself.
@@ -68,30 +70,32 @@
 
         <div class = "txt2">
           <br>
-          - I am an Undergraduate Researcher at Dr. Martin Yarmush's laboratory at Rutgers, New Brunswick.
+          - I love programming and have created numerous projects for the past 5 years; these projects usually utilized Java, Javascript, HTML, and CSS.
           <br>
           <br>
-          - I am the co-founder and Research Director of <a href="http://bioscience-collective.webflow.io/" target="_blank">BioScience Collective (BSC)</a>, a student-led nonprofit dedicated to helping students enjoy Biology.
+          - I utilize LeetCode for around 3 hours weekly to improve my analytical and programming skills!
           <br>
           <br>
           - I am an expert problem-solver; I am an avid user and have solved 4000+ competitive math and science problems on Brilliant.org, a problem-solving platform for aspiring STEM students.
           <br>
           <br>
+          - I am the co-founder and Research Director of <a href="http://bioscience-collective.webflow.io/" target="_blank" rel="noopener noreferrer">BioScience Collective (BSC)</a>, a student-led nonprofit dedicated to helping students enjoy Biology.
+          <br>
+          <br>
           - I have won many awards in various Science Competitions, including Science Olympiad and USA Biology Olympiad (USABO).
-          <br>
-          <br>
-          - I love programming and have been involved in numerous computational projects with JAVA and JavaScript for 5+ years. I am also currently learning Python and MATLAB.
           <br>
           <br>
           - I love reading Biology-related content and have spent 300+ hours reading 3000+ pages of advanced material (theory, lab techniques, hypotheses, etc) from graduate-level textbooks spanning Cell Biology, Plant Biology, Genetics, and Human Physiology.
           <br>
           <br>
-          - I am the General Meeting Planner of <a href="https://sites.google.com/site/rutgershsc//" target="_blank">Hindu Students Council (HSC)</a> at Rutgers, an organization devoted to protecting and preserving Hindu Dharma and philosophies.
+          - I am the General Meeting Planner of <a href="https://sites.google.com/site/rutgershsc//" target="_blank" rel="noopener noreferrer">Hindu Students Council (HSC)</a> at Rutgers, an organization devoted to protecting and preserving Hindu Dharma and philosophies.
         </div>
       </h2>
+          <br> <br> <br> <br> <br>
     </div>
+
     <footer>
-      <hr size="8" width="100%" color="red">
+      <!--<hr size="8" width="100%" color="red">-->
         <ul>
           <li>
             <a href="index.html" >Main</a>
@@ -117,16 +121,21 @@
             <a href="https://www.linkedin.com/in/yashas-ravi/" >
               <img src="Images/Link.png" alt="LinkedIn logo">
             </a>
+            <a href="https://github.com/YashasRavi" >
+              <img src="Images/gitLogo.png" alt="GitHub logo">
+            </a>
         </div>
     </footer>
 
     <script>
-      let image = document.querySelector(".Imme");
-      image.style.opacity = 0;
+
+
+      let Imme = document.querySelector(".AboutMe_main");
+      Imme.style.opacity = 0;
 
       var tick = function () {
-        image.style.opacity = +image.style.opacity + 0.01;
-        if (image.style.opacity <= 1) {
+        Imme.style.opacity = +Imme.style.opacity + 0.01;
+        if (Imme.style.opacity <= 1) {
             (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
         }
       };
