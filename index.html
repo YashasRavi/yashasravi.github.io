@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <title>Yashas Ravi - Home</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="description" content="This is the main page of my website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +32,7 @@
     <section class = "index-banner">
       <div class = "vertical-center">
         <h2 class = "txt">
-          I am an ethusiast of Programming, <br> Mathematics, and Biology.
+          I am an ethusiast of Programming, <br> Mathematics, and Biotech.
         </h2>
         <h3 class = "txt">
           I have extensive exposure to software developement, competitive mathematics, and biological theory!
@@ -105,6 +109,61 @@
   </footer>
 
   <script>
+    //window.onresize = function(){ location.reload(); }
+    /*
+    function resizedw(){
+        // Haven't resized in 100ms!
+    }
+
+    var doit;
+    window.onresize = function(){
+      clearTimeout(doit);
+      doit = setTimeout(resizedw, 100);
+    };
+    */
+    /*
+    var rtime;
+    var timeout = false;
+    var delta = 200;
+    window.onresize(function() {
+        rtime = new Date();
+        if (timeout === false) {
+            timeout = true;
+            setTimeout(resizeend, delta);
+        }
+    });
+
+    function resizeend() {
+        if (new Date() - rtime < delta) {
+            setTimeout(resizeend, delta);
+        } else {
+            timeout = false;
+            alert('Done resizing');
+        }
+    }
+    */
+
+    //RELOAD PAGE if window resize occurs!
+    var rtime;
+    var timeout = false;
+    var delta = 200;
+    $(window).resize(function() {
+        rtime = new Date();
+        if (timeout === false) {
+            timeout = true;
+            setTimeout(resizeend, delta);
+        }
+    });
+
+    function resizeend() {
+        if (new Date() - rtime < delta) {
+            setTimeout(resizeend, delta);
+        } else {
+            timeout = false;
+            location.reload();
+            //alert('Done resizing');
+        }
+    }
 
     let img1 = document.createElement("img");
     img1.className = "i1";
@@ -123,7 +182,7 @@
     let text = document.querySelectorAll(".txt");
 
 
-    var mq = window.matchMedia( "(min-width: 1200px)" );
+    var mq = window.matchMedia( "(min-width: 1520px)" );
       if (mq.matches) {
         console.log("WORKS");
         document.querySelector(".index-banner").appendChild(img1);

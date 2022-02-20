@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <title>Yashas Ravi - Contacts</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   <meta charset="UTF-8">
     <meta name="description" content="This is the contact me page of my website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,6 +137,31 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script>
+
+    //RELOAD PAGE if window resize occurs!
+    /*
+    var rtime;
+    var timeout = false;
+    var delta = 200;
+    $(window).resize(function() {
+        rtime = new Date();
+        if (timeout === false) {
+            timeout = true;
+            setTimeout(resizeend, delta);
+        }
+    });
+    */
+
+    function resizeend() {
+        if (new Date() - rtime < delta) {
+            setTimeout(resizeend, delta);
+        } else {
+            timeout = false;
+            location.reload();
+            //alert('Done resizing');
+        }
+    }
+
   //ANIMATES TEXT BOX
     let textInput = document.querySelector(".contactForm");
     let ques1 = document.querySelector("#textdir1");

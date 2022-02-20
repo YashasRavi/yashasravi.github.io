@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <title>Yashas Ravi - Portfolio</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   <meta charset="UTF-8">
     <meta name="description" content="This is the portfolio page of my website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -149,6 +153,30 @@
   </footer>
 
   <script>
+    //RELOAD PAGE if window resize occurs!
+    var rtime;
+    var timeout = false;
+    var delta = 200;
+    $(window).resize(function() {
+        rtime = new Date();
+        if (timeout === false) {
+            timeout = true;
+            setTimeout(resizeend, delta);
+        }
+    });
+
+    function resizeend() {
+        if (new Date() - rtime < delta) {
+            setTimeout(resizeend, delta);
+        } else {
+            timeout = false;
+            location.reload();
+            //alert('Done resizing');
+        }
+    }
+
+
+    //Getting all of the elements
     let mathImg = document.querySelector(".maths1");
     let ans = document.querySelector(".MathAns");
     let subB = document.querySelector(".subB");
