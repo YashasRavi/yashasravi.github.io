@@ -88,6 +88,12 @@
         <br> <br>
       -->
 
+      <label class = "textdir">Email</label>
+      <br> <br>
+      <input id = "tbox" class = "email" rows="1" cols = "35" type="text">
+
+      <br> <br>
+
         <label class = "textdir">Message</label>
         <br> <br>
         <textarea id = "tbox" class = "msg" rows="8" cols = "28"></textarea>
@@ -213,10 +219,13 @@
   }
 
   function sendMail () {
+      var tempMessage = document.querySelector(".msg").value + " " + document.querySelector(".email").value;
+
       var tempParams = {
         from_name:document.querySelector(".fromName").value,
         to_name:"Yashas Ravi",
-        message:document.querySelector(".msg").value,
+        //message:document.querySelector(".msg").value,
+        message: tempMessage,
       };
 
       if (document.querySelector(".fromName").value.trim().length == 0 || document.querySelector(".msg").value.trim().length == 0) {
