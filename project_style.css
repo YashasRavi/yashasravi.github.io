@@ -128,6 +128,7 @@ header {
   z-index: 1;
   width: 100%;
   height: 100px;
+  border-bottom: 7px solid black;
 }
 
 header .header-brand {
@@ -160,7 +161,7 @@ header nav ul li {
 
 header nav ul li a {
   font-family: 'Gowun Batang', serif;
-  font-size: 16px;
+  font-size: 13px;
   color: #111;
 }
 
@@ -190,6 +191,7 @@ header .header-cases {
   header nav ul li a {
     line-height: 60px;
     text-transform: uppercase;
+
   }
 
   header .header-cases {
@@ -217,13 +219,13 @@ header .header-cases {
 .index-banner {
   width: 100%;
   height: calc(100vh - 100px);
-  /*background-image: url(Images/BSC.png);*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /*background-color: red;*/
   background: linear-gradient(-45deg, #FFA07A, orange, red);
   display: table;
+  border-bottom: 15px solid black;
+
 }
 
 .vertical-center {
@@ -233,13 +235,15 @@ header .header-cases {
 
 .index-banner h2 {
   font-family: 'Gowun Batang', serif;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 900;
-  line-height: 40px;
+  line-height: 60px;
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 8px #111;
   padding: 10px 0px 0px 0px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .index-banner h3 {
@@ -252,14 +256,19 @@ header .header-cases {
   text-align: center;
   text-shadow: 2px 2px 8px #111;
   padding: 30px 0px 0px 0px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .index-banner h4 {
   text-align: center;
   color: white;
+  line-height: 25px;
   font-family: 'Gowun Batang', serif;
   font-size: 15px;
   text-shadow: 2px 2px 8px #111;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 
@@ -286,16 +295,54 @@ header .header-cases {
   color: blue;
 }
 
+#thorImg {
+  display: none;
+  width: 100%;
+}
+
+#SciFiSection {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border-bottom: 25px solid black;
+  border-top: 15px solid black;
+  color: white;
+}
+
+#SciFiText {
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+#SciFiText h2 {
+  font-size: 30px;
+  color: #FF7F50;
+}
+
+#SciFiImg {
+  width: 30%;
+  box-shadow: -10px 0px 20px grey;
+  display: none;
+}
+
+.indImage {
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px solid #FF7F50;
+  box-shadow: 5px 5px 5px yellow;
+}
+
   @media only screen and (min-width: 1000px) {
     .index-banner {
       width: 100%;
       height: 500px;
-      /*background-image: url(Images/BSC.png);*/
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       background-color: red;
-      display: table;s
+      display: table;
     }
 
     .index-banner h3 {
@@ -307,7 +354,6 @@ header .header-cases {
     .index-links div {
       display: inline-block;
       margin: 16px 16px 16px 16px;
-      /*margin: 10px 10px 0px 0px;*/
       width: calc((100% - 9*16px)/4);
       height: 150px;
     }
@@ -317,8 +363,55 @@ header .header-cases {
       line-height: 150px;
     }
 
+    #SciFiText h2 {
+      font-size: 50px;
+    }
+
+
+    #thorImg {
+      display: block;
+      width: 100%;
+
+    }
+
+    header nav ul li a {
+      font-size: 16px;
+    }
+
+
   }
 
+@media only screen and (min-width: 600px) {
+  #SciFiText {
+    width: 60%;
+  }
+
+  #SciFiImg {
+    display: block;
+    width: 40%
+  }
+
+  .indImage {
+    width: 50%;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  header nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  header nav ul li a {
+    font-size: 16px;
+  }
+
+}
 /*Contacts Page*/
   .contactMeMain {
     background: linear-gradient(-45deg, #4169E1, #483D8B)
@@ -326,16 +419,24 @@ header .header-cases {
   }
 
   .contacts {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+
   }
 
-  .contacts h1 {
+  .contacts  h1 {
     float: left;
     color: white;
     margin-left: 40px;
     font-size: 20px;
-    font-family: cursive;
     text-shadow: 4px 4px 3px #000000;
+    font-family: 'Gowun Batang', serif;
+    background-color: black;
+    padding: 30px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+    width: 30%;
+    margin-right: 8%;
   }
 
   .link {
@@ -348,282 +449,528 @@ header .header-cases {
       color: red;
   }
 
-  .contacts img {
-    display: none;
-    box-shadow: 5px 5px 5px black;
+  .contacts h1 div {
+    background-color: #800000;
+    margin-bottom: 15px;
+    width: 70%;
+    box-shadow: 3px 3px 5px pink;
+    border: 2px solid pink;
+    padding: 10px;
   }
+
+  .contacts h1 img {
+    width: 30%;
+    margin-left: 10px;
+  }
+
+  .contacts #contactsDiv {
+    margin-top: 0px;
+    border-radius: 10px;
+    margin-right: 40px;
+    border: 5px solid black;
+    float: right;
+    width: 50%;
+    box-shadow: 5px 5px 5px grey;
+    background-color: black;
+  }
+
+  #contactsDiv h3 {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Gowun Batang', serif;
+  }
+
+  #contactsDiv div {
+    margin-left: 30px;
+    background-color: #800000;
+    margin-bottom: 15px;
+    width: 70%;
+    box-shadow: 3px 3px 5px pink;
+    border: 2px solid pink;
+  }
+
+  #contactsDiv div h4 {
+    color: pink;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-shadow: 4px 4px 3px #000000;
+    font-family: 'Gowun Batang', serif;
+  }
+
+  #contactsDiv div h4:hover {
+    color: red;
+  }
+
+  #actImg {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 50%;
+    box-shadow: 3px 3px 5px pink;
+    border: 2px solid pink;
+  }
+
+
 
   .textdir {
     color: white;
-    /*margin-left: 30px;*/
     margin-bottom: 20px;
     margin-top: 20px;
-    /*font-weight: bold;*/
-    font-family: cursive;
     text-shadow: 0 0 2px yellow;
+    font-size: 20px;
+  }
+
+  #contactFormSect {
+    background-image: url("Images/contactNew.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 10px solid #191970;
+  }
+
+  .contactForm {
+      margin-right: 20px;
+
+
+  }
+
+  .msg {
+    width: 300px;
   }
 
   #tbox {
-    /*margin-left: 30px;*/
     background-color: yellow;
     border: 2px solid white;
     box-shadow: 5px 5px 5px black;
+    resize: none;
+    font-family: 'Gowun Batang', serif;;
+  }
+
+  @media only screen and (max-width: 1050px) {
+
+        .contacts  h1 {
+            width: 40%;
+
+        }
+
+        .contacts {
+          width: 100%;
+        }
+
+        #actImg {
+          width: 90%;
+          margin-left: 10px;
+        }
+
+        #contactsDiv div {
+
+          width: 80%;
+        }
+
+        .contacts h1 img {
+          width: 50%;
+          margin-top: 20px;
+        }
+
+  }
+
+  @media only screen and (max-width: 700px) {
+      .contacts h1 img {
+        display: none;
+      }
+
+      .contacts {
+          width: 90%;
+          flex-direction: column;
+      }
+
+      .contacts h1 {
+        width: 81%;
+        margin-left: 30px;
+      }
+
+      .contacts #contactsDiv {
+        width: 90%;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+
+      #actImg {
+        width: 70%;
+      }
+
+      #contactsDiv h3 {
+        margin-bottom: 20px;
+      }
+
+  }
+
+  @media only screen and (max-width: 450px) {
+    .msg {
+      width: 90%;
+    }
+
+    .contacts {
+      font-size: 12px;
+      width: 80%;
+    }
+
+    .contacts h1 {
+      width: 70%;
+    }
+
+    #actImg {
+      width: 85%;
+    }
+
+    #contactsDiv div {
+      margin-left: 15px;
+    }
+
+    #contactsDiv div h4 {
+      margin-right: 10px;
+    }
+
   }
 
   #sub {
     visibility: visible;
+    cursor: pointer;
     color: yellow;
     display: block;
-    font-family: cursive;
-    /*margin-left: 30px;*/
     margin-top: 20px;
     box-shadow: 1px 1px 5px yellow;
-
-    /*margin-top: 10px;*/
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
   }
-  /*
-  .link:visited {color:yellow;}
-*/
+
   /*PORTFOLIO PAGE*/
 
   .PortMain {
     background: linear-gradient(#B0E0E6, #98FB98, #66CDAA);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
   }
 
-  .portText {
-    max-width: 90%;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    padding-right: 80px;
-    padding-left: 20px;
-    font-size: 20px;
-    /*(background-color: lightblue;*/
-    color: blue;
-    text-shadow: 2px 2px 10px #696969;
-
-  }
-
-  .Example {
-    /*background-color: lightblue;*/
-    /*visibility: hidden;*/
-    /*display: none;*/
-    /*height: 500px;*/
-    max-width: 90%;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-right: 80px;
-    padding-left: 20px;
-    font-size: 15px;
-    font-family: monospace;
-    line-height: 1.5;
-    text-shadow: #FC0 1px 0 5px;
-  }
-
-  .Example h2 {
-      color: #008080;
-  }
-
-  .Example h2:hover {
-    color: black;
-  }
-
-  .image {
-    /*displsay: none;*/
-    /*background-color: lightblue;*/
-    /*display: inline-block;*/
-    /*max-width: 90%;*/
-  }
-
-  #GraphCalc {
-    max-width: 90%;
-  }
-
-  .image img  {
-    margin-left: 20px;
-    margin-top: 30px;
-    border: 3px solid brown;
-    width: 75%;
-    box-shadow: 0px 0px 10px yellow;
-  }
-
-  .image textarea, button, .HintTrack, .hint {
-    visibility: hidden;
-  }
-
-  .image textarea {
-    background-color: lightblue;
-    border: 2px solid black;
-    position:relative;
-    resize: none;
-    top: 20px;
-    left: 8%;
-    width: 80%;
-    height: 20px;
-  }
-
-  .image button {
-    color: lightgreen;
-    display: block;
-    position: relative;
-    margin-top: 10px;
-    top: 20px;
-    left: 8%;
-    bottom: 20px;
-  }
-
-  .image .HintTrack {
-    position: relative;
-    top: 30px;
-    left: 8%;
-    margin-bottom: 20px;
-  }
-
-  .image .hint {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  @media only screen and (min-width: 900px) {
-    .image .hint {
-      width: 50%;
-    }
-
-    .image .maths1 {
-      width: 70%;
-    }
-
-  }
-
-  @media only screen and (min-width: 1500px) {
-    .image .maths1 {
-      width: 30%;
-    }
-
-    .image .HintTrack {
-      display: inline-block;
-      position: relative;
-      top: -460px; /*-460*/
-      left: -4.6%; /*-70*/
-      font-weight: bold;
-    }
-
-    .image .hint {
-      display: inline-block;
-      position: relative;
-      top: -450px; /*-450*/
-      left: 32.9%; /*-500*/
-      border: 3px solid brown;
-      width: 30%;
-
-    }
-
-    .image textarea {
-      display: inline-block;
-      background-color: lightblue;
-      resize: none;
-      width: 120px;
-      height: 20px;
-      position: relative;
-      left: 3.29%; /*50*/
-      top: -510px; /*-510*/
-    }
-
-    .image button {
-      display: inline-block;
-      position: relative;
-      color: lightgreen;
-      left: -5.26%; /*-80, -5.26*/
-      top: -460px; /*-460*/
-    }
-
-  }
-
-  .image img:hover {
-    border: 3px solid black;
-  }
-
-  .MVideo {
-    /*background-color: lightblue;*/
-    max-width: 90%;
-  }
-
-  .MVideo img {
-    margin-left: 20px;
-    margin-top: 30px;
-    border: 3px solid brown;
-    width: 75%;
-    box-shadow: 0px 0px 10px yellow;
-  }
-
-  .MVideo img:hover {
-    border: 3px solid black;
-  }
-
-  @media only screen and (min-width: 600px) {
-    .portText, .Example {
-      padding-left: 80px;
-    }
-
-    .image img {
-      margin-left: 80px;
-      width: 30%;
-    }
-
-    .MVideo img  {
-      margin-left: 80px;
-      width: 30%;
-    }
-  }
-
-/*CASES*/
-/*
-  .cases-links {
-    padding-left: 100px;
-    padding-right: 80px;
-    background-color: #f3f3f3;
-  }
-
-  .cases-links .cases-link {
-    float: left;
-    margin: 20px 20px 20px 20px;
-    width: calc((100% - 180px)/4);
-    height: 200px;
-    background-color: #e3e3e3;
-  }
-
-  .cases-links h2 {
+  #mainTextDiv {
+    background-color: #00008B;
+    color: lightblue;
+    border-bottom: 7px solid #008080;
     font-family: 'Gowun Batang', serif;
+    text-shadow: 2px 2px 10px lightblue;
     font-size: 30px;
-    font-weight: 900;
-    line-height: 100px;
-    color: #111;
+    padding: 20px;
+    padding-top: 30px;
     text-align: center;
-    text-shadow: 1px 1px 2px #111;
-    padding: 10px 0px 0px 0px;
-    text-transform: uppercase;
+    line-height: 35px;
+
   }
 
-  .cases-links .cases-link p {
-    line-height: 100px;
+  .divText {
+    margin-top: 30px;
+    background-color: green;
+    border: 5px solid #32CD32;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-family: 'Gowun Batang', serif;
-    font-size: 16px;
-    font-weight: 900;
-    color: #111;
-    text-align: center;
-    text-shadow: 1px 1px 2px #111;
-    padding: 10px 0px 0px 0px;
-    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 25px;
+    box-shadow: 0px 0px 5px 5px green;
   }
-  */
+
+  .divText #divImg {
+    width: 40%;
+    height: 500px;
+    margin-left: 20px;
+    border: 5px solid lightblue;
+    overflow-x: auto;
+    overflow-y:hidden;
+    box-shadow: 0px 0px 2px 2px lightblue;
+  }
+
+  #divImg img {
+    height: 500px;
+  }
+
+  .divText h2 {
+    color: lightblue;
+    width: 60%;
+    padding-right: 15px;
+    height: 500px;
+    overflow-y: auto;
+
+  }
+
+  .divTextTitle {
+    font-size: 25px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+
+  .gitBtn {
+    font-family: 'Gowun Batang', serif;
+    margin-left: 10px;
+    color: lightblue;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid lightblue;
+    box-shadow: 0px 0px 2px 2px lightblue;
+    border-radius: 10px;
+  }
+
+  .gitBtn:hover {
+    color: lightgreen;
+  }
+
+  .mathImgBtn {
+    color: lightgreen;
+    font-family: 'Gowun Batang', serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid green;
+    box-shadow: 0px 0px 2px 2px green;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
+
+  .mathImgBtn:hover {
+    color: lightblue;
+  }
+
+
+  .mathImage {
+    background-color: green;
+    border: 5px solid #32CD32;
+    width: 90%;
+    height: 100%;
+    display: block;
+    font-family: 'Gowun Batang', serif;
+    font-size: 15px;
+    line-height: 25px;
+    box-shadow: 0px 0px 5px 5px green;
+  }
+
+  .mathImageContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mathImageText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    padding: 10px;
+    width: 50%;
+    color: lightblue;
+    font-size: 20px;
+    font-family: 'Gowun Batang', serif;
+  }
+
+  .MathAns {
+    resize: none;
+    color: lightblue;
+    border: 2px solid lightblue;
+    font-size: 15px;
+    font-family: 'Gowun Batang', serif;
+  }
+
+  .mathImageImg  {
+    width: 50%;
+    height: 550px;
+    margin-left: 20px;
+    border: 5px solid lightblue;
+    overflow-y: auto;
+    overflow-x: auto;
+    box-shadow: 0px 0px 2px 2px lightblue;
+  }
+
+  .mathImageImg img {
+    width: 100%;
+    height: 550px;
+  }
+
+  .hintContainer {
+    overflow-x:auto;
+    overflow-y: auto;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .hint {
+    width: 100%;
+  }
+
+
+  #mathBtn {
+    color: lightblue;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: 'Gowun Batang', serif;
+    border: 2px solid lightblue;
+    box-shadow: 0px 0px 2px 2px lightblue;
+    border-radius: 10px;
+  }
+
+  #mathBtn:hover {
+    color: lightgreen;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .mathImageImg img {
+      width: 600px;
+      height: 700px;
+    }
+
+    .hint {
+      width: 400px;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 800px) {
+      .mathImageContent {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mathImageImg {
+        width: 90%;
+        margin-bottom: 50px;
+      }
+
+      .mathImageImg img {
+        width: 750px;
+        height: 700px;
+      }
+
+      .mathImageText {
+        background-color: #00008B;
+        border: 3px solid lightgreen;
+        box-shadow: 0px 0px 5px 5px lightgreen;
+        padding-top: 30px;
+      }
+
+      .hint {
+        width: 350px;
+        overflow-x: auto;
+      }
+
+      #mainTextDiv {
+        font-size: 20px;
+      }
+
+      .divText {
+          flex-direction: column;
+          width: 85%;
+      }
+
+      .divText h2 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 10px solid green;
+        height: 350px;
+        padding-bottom: 20px;
+      }
+
+
+      .divText #divImg {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+      .divText h2 {
+        font-size: 12px;
+      }
+
+      .gitBtn {
+        font-size: 12px;
+      }
+
+      .divText {
+        width: 80%;
+      }
+
+      .divTextTitle {
+        font-size: 20px;
+      }
+
+      #mathBtn {
+        font-size: 12px;
+      }
+
+      .MathAns {
+        width: 50%;
+      }
+
+      .mathImageText {
+        width: 90%;
+        margin-right: 0px;
+      }
+
+      .mathImageImg {
+        margin-left: 0px;
+        width: 90%;
+      }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .divText {
+      width: 75%;
+      padding: 15px;
+    }
+
+    #mainTextDiv {
+      font-size: 16px;
+    }
+
+    .divText #divImg {
+      height: 350px;
+    }
+
+    .mathImageImg img {
+      width: 500px;
+    }
+
+    .mathImageImg {
+      height: 400px;
+    }
+  }
 
 /*FOOTER*/
 
 footer {
   width: calc(100% - 80px);
   padding: 40px 40px;
-  /*background-color: white;*/
-  /*background: linear-gradient(0deg, #000080, #4B0082);*/
   background: linear-gradient(to left, #4B0082, black);
   overflow: hidden;
   border-top: 10px solid green;
@@ -659,14 +1006,8 @@ footer ul li a:hover {
 }
 
 .footer-sm img {
-  /*
-  height: 70px;
-  width: auto;
-  */
   max-width:70%;
-    height:auto;
-  /*height: 50px;*/
-  /*border: 3px solid white;*/
+  height:auto;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 5px black;
@@ -692,30 +1033,29 @@ footer ul li a:hover {
     margin-bottom: 35px;
   }
 
-  .contacts img {
-    display: inline-block;
-    margin-top: 30px;
-    margin-right: 40px;
-    border: 5px solid #ffff00;
-    float: right;
-    width: 50%;
-  }
-
 }
 
 .AboutMe_main {
-  background: linear-gradient(to bottom, #008000, black);  /*#2F4F4F*/
-  background-size: 100%;
+  background: linear-gradient(to bottom, #008000, black);
   margin: 0px;
+  width: 100%;
+}
+
+#topStuff {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .AboutMe_main img {
-  width: 25%;
-  margin: 30px calc(75% * 0.5);
+  width: 35%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 3px solid #ffff00;
 }
 
-.AboutMe_main h1 {
+.AboutMe_main #aboutTitle h1 {
   color: yellow;
   font-size: 50px;
   padding: 20px;
@@ -723,41 +1063,145 @@ footer ul li a:hover {
   text-shadow: 0 0 4px lightgreen;
 }
 
-.AboutMe_main h2 {
-  padding: 10px 20px 30px 20px;
-  color: white;
-  line-height: 30px;
-  font-family: sans-serif;
+#aboutTitle {
+  margin-top: 20px;
 }
 
-.AboutMe_main h2 .about1, .about2, .about3 {
-    font-family: 'Gowun Batang', serif;
-    padding-top: 20px;
-    font-size: 20px;
-    /*color: lightblue;*/
+.AboutMe_main  {
+  color: white;
+  line-height: 30px;
+  font-family: 'Gowun Batang', serif;;
 }
+
+.AboutMe_main .about2, .about3 {
+    font-family: 'Gowun Batang', serif;
+    color: white;
+    margin-left: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.AboutMe_main .about1 {
+  font-family: 'Gowun Batang', serif;
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  background-color: black;
+  width: 55%;
+  margin: 30px calc(75% * 0.5 - 12.5%);
+  border: 3px solid #ffff00;
+  text-shadow: 2px 2px 5px yellow;
+  box-shadow: 2px 2px 5px yellow;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ .about1 p {
+   margin-left: 10px;
+   margin-right: 10px;
+ }
 
 .AboutMe_main .about2:hover, .about3:hover {
   color: lightgreen;
 }
 
 .AboutMe_main .arrow1 {
-  border: none;
-  margin-left: 0.1%;
+  margin-left: 1%;
   margin-bottom: 0px;
+  margin-top: 0px;
   width: 3%;
+  border: none;
 }
 
 .AboutMe_main .arrow2 {
-  border: none;
-  margin-left: 0.1%;
+  margin-left: 1%;
   margin-bottom: 0px;
+  margin-top: 0px;
   width: 3%;
+  border: none;
 }
 
 .AboutMe_main .txt1, .txt2 {
     padding-top: 20px;
     display: none;
+}
+
+.AboutMe_main #info1 {
+    background-color: black;
+    border-top: 4px solid yellow;
+    border-bottom: 4px solid yellow;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.abtDiv {
+  border-top: 2px solid white;
+  box-shadow: 0px 0px 3px 3px white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: black;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.abtDiv p {
+  width: 80%;
+  font-family: 'Gowun Batang', serif;
+  text-shadow: 0px 0px 3px yellow;
+  color: yellow;
+  margin-right: 10px;
+}
+
+.abtDiv a {
+  color: pink;
+}
+
+#p1 {
+  background-image: url("Images/pointOne.png");
+}
+
+#p2 {
+  background-image: url("Images/pointTwo.png");
+}
+
+#p3 {
+  background-image: url("Images/pointThree.png");
+}
+
+#p3_5 {
+  background-image: url("Images/point3_5.png");
+}
+
+#p4 {
+  background-image: url("Images/pointFour.png");
+}
+
+#p5 {
+  background-image: url("Images/pointFive.png");
+}
+
+#p6 {
+  background-image: url("Images/pointSix.png");
+}
+
+#p7 {
+  background-image: url("Images/pointSeven.png");
+}
+
+#chk {
+  width: 5%;
+  border: none;
+  margin-right: 20px;
 }
 
 #em {
@@ -766,17 +1210,92 @@ footer ul li a:hover {
 
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 700px) {
+  .AboutMe_main img {
+      width: 50%;
+  }
 
-.AboutMe_main .arrow1, .arrow2 {
-  margin-left: 1%;
+  .abtDiv {
+    height: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 15px;
+
+  }
+
+  .AboutMe_main #info1 {
+    width: 100%;
+
+  }
+
+  #chk {
+      width: 10%;
+      margin-left: 20px;
+      margin-right: 10px;
+  }
+
+   .about1 p {
+     font-size: 15px;
+   }
+
+   .AboutMe_main .about1 {
+     width: 70%;
+   }
+
+
 }
 
-  /*.AboutMe_main img {
-    width: 25%;
-    margin: 30px 640px 20px 560px;
-    border: 3px solid #ffff00;
-  }*/
+@media only screen and (max-width: 400px) {
+  #aboutTitle {
+    line-height: 60px;
+  }
+
+  .AboutMe_main img {
+    width: 80%;
+  }
+
+  .about1 p {
+    font-size: 12px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .AboutMe_main .about1 {
+    width: 80%;
+  }
+
+  .AboutMe_main .arrow1 {
+    border: none;
+    margin-left: 0.1%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 5%;
+  }
+
+  .AboutMe_main .arrow2 {
+    border: none;
+    margin-left: 0.1%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 5%;
+  }
+
+  .AboutMe_main .about2, .about3 {
+    font-size: 15px;
+  }
+
+  .abtDiv {
+      font-size: 12px;
+      margin-right: 10px;
+      height: 250px;
+  }
+
+  #chk {
+    margin-left: 10px;
+  }
+
+}
+
 }
 
 

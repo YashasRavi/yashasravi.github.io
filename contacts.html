@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href = "project_style.css">
 
+
   <!--Email JS-->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -33,39 +34,70 @@
         <li><a href="aboutme.html">About Me</a></li>
         <li><a href="index.html">Main</a></li>
       </ul>
-        <!--<a class = "header-cases" href="cases.html">Cases</a>-->
     </nav>
   </header>
   <main class="contactMeMain">
+   <section>
+    <br></br>
+    <br></br>
     <div class="contacts">
+      <br>
+      <br>
       <h1>
-        <!--
-        <br>
-        <br>
-        Email: yashas.ravi.nj@gmail.com
-        <br>
-        <br>
-        Phone: (908)-230-9502
-      -->
-        <br>
-        <br>
         Quick Links:
         <br>
         <br>
-        <br>
-        <a href=" https://www.linkedin.com/in/yashas-ravi/"  class = "link">My LinkedIn</a>
-        <br>
-        <br>
-        <a href="https://www.instagram.com/yashas.ravi.nj/"  class = "link">My Instagram</a>
-        <br>
-        <br>
-        <a href="https://github.com/YashasRavi"  class = "link">My Github</a>
-        <br>
+        <div>
+          <a href=" https://www.linkedin.com/in/yashas-ravi/"  class = "link">My LinkedIn</a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/yashas.ravi.nj/"  class = "link">My Instagram</a>
+        </div>
+        <div>
+          <a href="https://github.com/YashasRavi"  class = "link">My Github</a>
+        </div>
+        <img src="Images/phoneIcon.webp"></img>
       </h1>
-      <img src="Images/contact.png" alt="contacts">
+
+      <div id="contactsDiv">
+          <h3>
+              Some of my other socials:
+          </h3>
+          <div>
+            <a href="https://bere.al/en">
+              <h4>
+                  Add me on BeReal! My username is yashas_ravi.
+              </h4>
+            </a>
+          </div>
+          <div>
+            <a href="https://discord.com">
+              <h4>
+                  Friend me on Discord! My username is yashas@6575.
+              </h4>
+            </a>
+          </div>
+          <div>
+            <h4>
+              Communities I am sometimes active in:
+            </h4>
+            <a href="https://discord.com/channels/271605596623601675/@home">
+              <img id="actImg" src="Images/McuDis.png"></img>
+            </a>
+            <a href="https://discord.com/channels/409134033898045470/409141960339881995">
+              <img id="actImg" src="Images/RUCS.png"></img>
+            </a>
+          </div>
+      </div>
       <br>
     </div>
+    <br>
+    <br>
+    <br>
+  </section>
 
+
+    <section id="contactFormSect">
       <div class="contactForm">
         <br>
         <br>
@@ -81,31 +113,23 @@
         <input id = "tbox" class = "fromName" rows="1" cols = "35" type="text">
 
         <br> <br>
-        <!--
+
         <label class = "textdir">Email</label>
         <br> <br>
-        <input id = "em" rows="1" cols = "35" type="email">
+        <input id = "tbox" class = "email" rows="1" cols = "35" type="text">
+
         <br> <br>
-      -->
-
-      <label class = "textdir">Email</label>
-      <br> <br>
-      <input id = "tbox" class = "email" rows="1" cols = "35" type="text">
-
-      <br> <br>
 
         <label class = "textdir">Message</label>
         <br> <br>
-        <textarea id = "tbox" class = "msg" rows="8" cols = "28"></textarea>
+        <textarea id = "tbox" class = "msg" rows="8" cols = "20"></textarea>
         <br> <br>
-
-        <!--<input id = "sub" type="submit" value="Send">-->
-
-        <button id="sub" onclick="sendMail()"> Send Email <button>
+        <button id="sub" onclick="sendMail()"> Send Email! </button>
 
         <br> <br> <br>
 
     </div>
+  </section>
 
   </main>
 
@@ -114,9 +138,6 @@
         <li>
           <a href="index.html" >Main</a>
         </li>
-        <!--<li>
-          <a href="cases.html">Cases</a>
-        </li>-->
         <li>
           <a href="portfolio.html" >Portfolio</a>
         </li>
@@ -144,56 +165,13 @@
 
   <script>
 
-    //RELOAD PAGE if window resize occurs!
-    /*
-    var rtime;
-    var timeout = false;
-    var delta = 200;
-    $(window).resize(function() {
-        rtime = new Date();
-        if (timeout === false) {
-            timeout = true;
-            setTimeout(resizeend, delta);
-        }
-    });
-    */
-
-    function resizeend() {
-        if (new Date() - rtime < delta) {
-            setTimeout(resizeend, delta);
-        } else {
-            timeout = false;
-            location.reload();
-            //alert('Done resizing');
-        }
-    }
-
   //ANIMATES TEXT BOX
-    let textInput = document.querySelector(".contactForm");
-    let ques1 = document.querySelector("#textdir1");
-    let ques2 = document.querySelector("#textdir2");
-    let mes = document.querySelector("#tbox");
-    let submit = document.querySelector("#sub");
-    //submit.addEventListener("click", f1);
-/*
-    textInput.forEach((e) => {
-      //Slides all the text into the screen!!
-      e.style.marginLeft = "-600px";
-      var id = setInterval(frame, 5);
-      let pos = -600;
-      function frame() {
-        if (pos >= 30) {
-          clearInterval(id);
-        } else {
-          pos+=3;
-          e.style.marginLeft = pos + "px";
-        }
-      }
-    });
+  let textInput = document.querySelector(".contactForm");
+  let ques1 = document.querySelector("#textdir1");
+  let ques2 = document.querySelector("#textdir2");
+  let mes = document.querySelector("#tbox");
+  let submit = document.querySelector("#sub");
 
-  */
-
-  //Fades in image and links
   let Contacts = document.querySelector(".contacts");
   Contacts.style.opacity = 0;
 
@@ -218,18 +196,30 @@
     }
   }
 
+  function validateEmail(email)
+    {
+        var temp = /\S+@\S+\.\S+/;
+        return temp.test(email);
+    }
+
+
   function sendMail () {
       var tempMessage = document.querySelector(".msg").value + " " + document.querySelector(".email").value;
+
+      if (validateEmail(document.querySelector(".email").value) == false) {
+        alert("Please enter another Email! The Email you entered is invalid.");
+        return;
+      }
 
       var tempParams = {
         from_name:document.querySelector(".fromName").value,
         to_name:"Yashas Ravi",
-        //message:document.querySelector(".msg").value,
         message: tempMessage,
       };
 
       if (document.querySelector(".fromName").value.trim().length == 0 || document.querySelector(".msg").value.trim().length == 0) {
         alert("Please enter a valid name and message!");
+        return;
       }
       else {
 
@@ -242,14 +232,6 @@
       }
 
   }
-
-/*
-    function f1 () {
-      alert("Hello! Thanks for messaging me! Right now I haven't configured a database yet to store user input, so feel free to directly email me at yashas.ravi.nj@gmail.com or text me at 908-230-9502!");
-    }
-*/
-
-  //https://www.youtube.com/watch?v=NxVCq4p0Kb0
 
   </script>
 

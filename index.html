@@ -24,18 +24,17 @@
         <li><a href="aboutme.html">About Me</a></li>
         <li><a href="contacts.html">Contact</a></li>
       </ul>
-        <!--<a cjlass = "header-cases" href="cases.html">Cases</a>-->
     </nav>
   </header>
 
   <main>
     <section class = "index-banner">
-      <div class = "vertical-center">
+      <div id="indexText" class = "vertical-center">
         <h2 class = "txt">
-          I am an ethusiast of Programming, <br> Mathematics, and Biotech.
+          I am Yashas!
         </h2>
         <h3 class = "txt">
-          I have extensive exposure to software developement, competitive mathematics, and biological theory!
+          I am an ethusiast of Programming, <br> Mathematics, and Biotech.
         </h3>
         <br>
         <br>
@@ -46,34 +45,37 @@
       </div>
     </section>
 
-    <!--
-    <section class = "index-links">
-      <a href="cases.html">
-        <div class = "BoxL1">
-          <h3>Cases</h3>
+    <section id="SciFiSection">
+      <div id="SciFiText">
+        <h2 id="SciFiTitle">
+          I  love Sci-Fi and Fantasy movies!
+        </h2>
+        <div>
+          <br></br>
+          <div id="mcu">
+            <img class="indImage" src="Images/marvel.png"></img>
+          </div>
+          <div id="indepDay">
+            <img class="indImage" src="Images/indepDay.png"></img>
+          </div>
+          <div id="jpark">
+            <img class="indImage" src="Images/jPark.png"></img>
+          </div>
+          <div id="hpotter">
+            <img class="indImage" src="Images/hPotter.png"></img>
+          </div>
+          <div id="starwars">
+            <img class="indImage" src="Images/starwars.png"></img>
+          </div>
         </div>
-      </a>
-
-      <a href="portfolio.html">
-        <div class = "BoxL2">
-          <h3>Portfolio</h3>
-        </div>
-      </a>
-
-      <a href="aboutme.html">
-        <div class = "BoxL3">
-          <h3>About</h3>
-        </div>
-      </a>
-
-      <a href="contacts.html">
-        <div class = "BoxL4">
-          <h3>Contact</h3>
-        </div>
-      </a>
+      </div>
+      <img id="SciFiImg" src="Images/SciFi.png"></img>
 
     </section>
-  -->
+
+    <section id="indexImage">
+        <img id = "thorImg" src="Images/ThorFinal.png"></img>
+    </section>
   </main>
 
   <footer>
@@ -81,9 +83,6 @@
         <li>
           <a href="index.html">Main</a>
         </li>
-        <!--<li>
-          <a href="cases.html">Cases</a>
-        </li>-->
         <li>
           <a href="portfolio.html" >Portfolio</a>
         </li>
@@ -109,61 +108,6 @@
   </footer>
 
   <script>
-    //window.onresize = function(){ location.reload(); }
-    /*
-    function resizedw(){
-        // Haven't resized in 100ms!
-    }
-
-    var doit;
-    window.onresize = function(){
-      clearTimeout(doit);
-      doit = setTimeout(resizedw, 100);
-    };
-    */
-    /*
-    var rtime;
-    var timeout = false;
-    var delta = 200;
-    window.onresize(function() {
-        rtime = new Date();
-        if (timeout === false) {
-            timeout = true;
-            setTimeout(resizeend, delta);
-        }
-    });
-
-    function resizeend() {
-        if (new Date() - rtime < delta) {
-            setTimeout(resizeend, delta);
-        } else {
-            timeout = false;
-            alert('Done resizing');
-        }
-    }
-    */
-
-    //RELOAD PAGE if window resize occurs!
-    var rtime;
-    var timeout = false;
-    var delta = 200;
-    $(window).resize(function() {
-        rtime = new Date();
-        if (timeout === false) {
-            timeout = true;
-            setTimeout(resizeend, delta);
-        }
-    });
-
-    function resizeend() {
-        if (new Date() - rtime < delta) {
-            setTimeout(resizeend, delta);
-        } else {
-            timeout = false;
-            location.reload();
-            //alert('Done resizing');
-        }
-    }
 
     let img1 = document.createElement("img");
     img1.className = "i1";
@@ -180,6 +124,16 @@
     img3.src = "Images/MathStuff.png";
 
     let text = document.querySelectorAll(".txt");
+    let logo = document.querySelectorAll(".indImage");
+
+    let indText = document.querySelector("#indexText");
+
+    var tickText = function () {
+      indText.style.opacity = +indText.style.opacity + 0.01;
+      if (indText.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tickText)) || setTimeout(tickText, 16);
+      }
+    };
 
 
     var mq = window.matchMedia( "(min-width: 1520px)" );
@@ -229,8 +183,25 @@
         });
 
       }
+      else {
+          indText.style.opacity = 0;
+          tickText();
+      }
 
-
+      logo.forEach((n) => {
+          n.style.marginLeft = "-600px";
+          var id = setInterval(frame,5);
+          let pos = -600;
+          function frame() {
+            if (pos >= 0) {
+              clearInterval(id);
+            }
+            else {
+              pos +=3;
+              n.style.marginLeft = pos+"px";
+            }
+          }
+      });
 
   //MAKES THE IMAGE FADE IN
     var tick1 = function () {
@@ -256,9 +227,41 @@
       }
     };
 
+    let sTitle = document.querySelector("#SciFiTitle");
+    let sImage = document.querySelector("#SciFiImg");
+    let tImage = document.querySelector("#thorImg");
+
+    sTitle.style.opacity = 0;
+    sImage.style.opacity = 0;
+    tImage.style.opacity = 0;
+
+    var tick4 = function () {
+      sTitle.style.opacity = +sTitle.style.opacity + 0.01;
+      if (sTitle.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick4)) || setTimeout(tick4, 16);
+      }
+    };
+
+    var tick5 = function () {
+      sImage.style.opacity = +sImage.style.opacity + 0.01;
+      if (sImage.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick5)) || setTimeout(tick5, 16);
+      }
+    };
+
+    var tick6 = function () {
+      tImage.style.opacity = +tImage.style.opacity + 0.01;
+      if (tImage.style.opacity <= 1) {
+          (window.requestAnimationFrame && requestAnimationFrame(tick6)) || setTimeout(tick6, 16);
+      }
+    };
+
     tick1();
     tick2();
     tick3();
+    tick4();
+    tick5();
+    tick6();
 
 
   </script>
