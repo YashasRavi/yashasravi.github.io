@@ -274,7 +274,7 @@ header .header-cases {
 
 .index-links div {
   margin: 16px 16px 10px 10px;
-  width: 100%
+  width: 100%;
   height: 100px;
   background-color: #f2f2f2;
 }
@@ -1293,10 +1293,5 @@ footer ul li a:hover {
   #chk {
     margin-left: 10px;
   }
-
-}
-
-}
-
 
 }
